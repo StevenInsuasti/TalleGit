@@ -6,6 +6,7 @@
     <title>Clon MercadoLibre</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/dev-portfolio-1.css">
     <link rel="stylesheet" href="css/dev-portfolio-3.css">
 </head>
 <body>
@@ -44,44 +45,8 @@
 
         <div class="products" id="products-container">
 
-            <article class="product-card" data-product-name="iPhone 14 Pro Max" data-category="tecnologia">
-                <h3>iPhone 14 Pro Max</h3>
-                <p class="price">$4.500.000</p>
-                <p class="description">Smartphone Apple última generación</p>
-            </article>
-
-            <article class="product-card" data-product-name="Samsung Galaxy S23" data-category="tecnologia">
-                <h3>Samsung Galaxy S23</h3>
-                <p class="price">$3.200.000</p>
-                <p class="description">Smartphone Samsung con cámara avanzada</p>
-            </article>
-
-            <article class="product-card" data-product-name="Laptop HP Pavilion" data-category="computacion">
-                <h3>Laptop HP Pavilion</h3>
-                <p class="price">$2.800.000</p>
-                <p class="description">Laptop para trabajo y estudio</p>
-            </article>
-
-            <article class="product-card" data-product-name="Auriculares Sony" data-category="audio">
-                <h3>Auriculares Sony</h3>
-                <p class="price">$1.200.000</p>
-                <p class="description">Auriculares con cancelación de ruido</p>
-            </article>
-
-            <article class="product-card" data-product-name="Smart TV LG 55 pulgadas" data-category="electrodomesticos">
-                <h3>Smart TV LG 55"</h3>
-                <p class="price">$2.500.000</p>
-                <p class="description">Televisor inteligente 4K</p>
-            </article>
-
-            <article class="product-card" data-product-name="PlayStation 5" data-category="gaming">
-                <h3>PlayStation 5</h3>
-                <p class="price">$2.900.000</p>
-                <p class="description">Consola de videojuegos última generación</p>
-            </article>
-
             <div class="product-card">
-                <img src="https://via.placeholder.com/200" alt="Producto 1">
+                <img src="https://via.placeholder.com/200" alt="iPhone 14 Pro Max">
                 <h3>iPhone 14 Pro Max</h3>
                 <p class="price">$4.299.000</p>
                 <p class="discount">12% OFF</p>
@@ -89,7 +54,7 @@
             </div>
 
             <div class="product-card">
-                <img src="https://via.placeholder.com/200" alt="Producto 2">
+                <img src="https://via.placeholder.com/200" alt="Samsung Galaxy S23 Ultra">
                 <h3>Samsung Galaxy S23 Ultra</h3>
                 <p class="price">$3.899.000</p>
                 <p class="discount">15% OFF</p>
@@ -97,7 +62,7 @@
             </div>
 
             <div class="product-card">
-                <img src="https://via.placeholder.com/200" alt="Producto 3">
+                <img src="https://via.placeholder.com/200" alt="MacBook Air M2">
                 <h3>MacBook Air M2</h3>
                 <p class="price">$5.499.000</p>
                 <p class="discount">10% OFF</p>
@@ -105,7 +70,7 @@
             </div>
 
             <div class="product-card">
-                <img src="https://via.placeholder.com/200" alt="Producto 4">
+                <img src="https://via.placeholder.com/200" alt="PlayStation 5">
                 <h3>PlayStation 5</h3>
                 <p class="price">$2.599.000</p>
                 <p class="discount">5% OFF</p>
@@ -113,7 +78,7 @@
             </div>
 
             <div class="product-card">
-                <img src="https://via.placeholder.com/200" alt="Producto 5">
+                <img src="https://via.placeholder.com/200" alt="Smart TV Samsung 55">
                 <h3>Smart TV Samsung 55"</h3>
                 <p class="price">$1.899.000</p>
                 <p class="discount">20% OFF</p>
@@ -121,7 +86,7 @@
             </div>
 
             <div class="product-card">
-                <img src="https://via.placeholder.com/200" alt="Producto 6">
+                <img src="https://via.placeholder.com/200" alt="AirPods Pro 2">
                 <h3>AirPods Pro 2</h3>
                 <p class="price">$899.000</p>
                 <p class="discount">8% OFF</p>
@@ -137,46 +102,60 @@
 
         <div class="developers-container">
 
-            <div class="developer-card">
-
-                <img src="assets/img/avatar.png" alt="Avatar Steven Eraso" width="120">
-
-                <h3>Steven Eraso Insuasti</h3>
-
-                <img src="assets/img/avatar.png" alt="Avatar Steven Eraso" width="120">
-                <h3>Steven Eraso Insuasti</h3>
-                <p class="description">
-                    Desarrollador web apasionado por la creación de interfaces modernas y funcionales.
-                    Me enfoco en construir aplicaciones web eficientes, limpias y fáciles de usar.
-                </p>
-
-                <h4>Servicios ofrecidos</h4>
-                <ul>
-                    <li>Desarrollo de páginas web</li>
-                    <li>Diseño de interfaces UI</li>
-                    <li>Maquetación con HTML y CSS</li>
-                    <li>Integración con JavaScript</li>
-                </ul>
-
-                <h4>Tecnologías</h4>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                    <li>Git</li>
-                    <li>GitHub</li>
-                </ul>
-
-                <p>
-                    <strong>GitHub:</strong>
-                    <a href="https://github.com/tuusuario" target="_blank">
-                        Ver perfil
+            <article class="developer-card" id="dev-1">
+                <div class="dev-header">
+                    <div class="dev-avatar">
+                        <img src="assets/img/avatar.png" alt="Steven Eraso Insuasti">
+                    </div>
+                    <div class="dev-basic-info">
+                        <h3 class="dev-name">Steven Eraso Insuasti</h3>
+                        <p class="dev-title">Desarrollador Web Full Stack</p>
+                        <p class="dev-level">Estudiante de quinto semestre</p>
+                    </div>
+                </div>
+                
+                <div class="dev-body">
+                    <div class="dev-description">
+                        <h4>Sobre mí</h4>
+                        <p>Desarrollador web apasionado por la creación de interfaces modernas y funcionales. Me enfoco en construir aplicaciones web eficientes, limpias y fáciles de usar, con especial interés en el desarrollo frontend y la experiencia de usuario.</p>
+                    </div>
+                    
+                    <div class="dev-services">
+                        <h4>Servicios</h4>
+                        <ul>
+                            <li>Desarrollo de páginas web</li>
+                            <li>Diseño de interfaces UI</li>
+                            <li>Maquetación con HTML y CSS</li>
+                            <li>Integración con JavaScript</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="dev-technologies">
+                        <h4>Tecnologías</h4>
+                        <ul class="tech-list">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>Git</li>
+                            <li>GitHub</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="dev-contribution">
+                        <h4>Aporte al proyecto</h4>
+                        <p>Implementé la sección de lista de productos destacados (product-list), desarrollando la estructura HTML con tarjetas de productos que incluyen imágenes, precios, descuentos y opciones de envío. También participé en la integración visual de los componentes del proyecto.</p>
+                    </div>
+                </div>
+                
+                <div class="dev-footer">
+                    <div class="dev-contact">
+                        <p class="contact-phone">📱 Celular: 3001234567</p>
+                    </div>
+                    <a href="https://github.com/StevenInsuasti" class="dev-github" target="_blank" rel="noopener noreferrer">
+                        <span>GitHub</span>
                     </a>
-                <p>
-                    <strong>GitHub:</strong>
-                    <a href="https://github.com/tuusuario" target="_blank">Ver perfil</a>
-                </p>
-            </div>
+                </div>
+            </article>
             
             <!-- Portafolio Desarrollador 3 -->
             <article class="developer-card" id="dev-3">
