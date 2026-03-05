@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clon MercadoLibre</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
 
     <!-- Navbar -->
-    <header>
-        <nav>
+    <header class="navbar" id="navbar">
+        <nav class="navbar-container">
             <h1>MercadoLibre Clone</h1>
         </nav>
     </header>
@@ -18,8 +19,8 @@
     <!-- Buscador de productos -->
     <section id="product-search">
         <h2>Buscar productos</h2>
-        <input type="text" placeholder="Buscar...">
-        <button>Buscar</button>
+        <input type="text" class="search-input" id="searchInput" placeholder="Buscar...">
+        <button class="search-button" id="searchButton">Buscar</button>
     </section>
 
     <!-- Lista de productos -->
@@ -62,6 +63,7 @@
         <p>Proyecto académico - Clon MercadoLibre</p>
     </footer>
 
+    <script src="js/navbar.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
