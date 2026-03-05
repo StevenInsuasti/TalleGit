@@ -10,9 +10,56 @@
 <body>
 
     <!-- Navbar -->
-    <header>
-        <nav>
-            <h1>MercadoLibre Clone</h1>
+    <header class="navbar">
+        <nav class="navbar-container">
+            <!-- Logo y ubicación -->
+            <div class="navbar-top">
+                <div class="navbar-logo">
+                    <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.19.1/mercadolibre/logo__large_plus.png" alt="MercadoLibre Logo">
+                </div>
+                
+                <div class="navbar-location">
+                    <svg class="location-icon" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M8 0C5.2 0 3 2.2 3 5c0 3.9 5 11 5 11s5-7.1 5-11c0-2.8-2.2-5-5-5zm0 7.5c-1.4 0-2.5-1.1-2.5-2.5S6.6 2.5 8 2.5s2.5 1.1 2.5 2.5S9.4 7.5 8 7.5z"/>
+                    </svg>
+                    <span class="location-text">Enviar a</span>
+                    <span class="location-name">Bogotá</span>
+                </div>
+            </div>
+
+            <!-- Barra de búsqueda -->
+            <div class="navbar-search">
+                <input type="text" class="search-input" placeholder="Buscar productos, marcas y más...">
+                <button class="search-button">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M13.5 8.5c0 2.8-2.2 5-5 5s-5-2.2-5-5 2.2-5 5-5 5 2.2 5 5zm5.4 10.1l-5.4-5.4c-1 .8-2.3 1.3-3.7 1.3-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6c0 1.4-.5 2.7-1.3 3.7l5.4 5.4-1 1z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menú de navegación -->
+            <div class="navbar-menu">
+                <ul class="navbar-links">
+                    <li><a href="#" class="navbar-link">Categorías</a></li>
+                    <li><a href="#" class="navbar-link">Ofertas</a></li>
+                    <li><a href="#" class="navbar-link">Historial</a></li>
+                    <li><a href="#" class="navbar-link">Supermercado</a></li>
+                    <li><a href="#" class="navbar-link">Moda</a></li>
+                    <li><a href="#" class="navbar-link">Vender</a></li>
+                    <li><a href="#" class="navbar-link">Ayuda</a></li>
+                </ul>
+
+                <div class="navbar-user">
+                    <a href="#" class="user-link">Crea tu cuenta</a>
+                    <a href="#" class="user-link">Ingresa</a>
+                    <a href="#" class="user-link">Mis compras</a>
+                    <a href="#" class="cart-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-9.8-3.2l.9-1.6c.1-.2.4-.3.6-.3h7.4c.2 0 .5-.1.6-.3l3.9-7.1-1.7-1L14 12H8.1l-.2-.5L4.8 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2.9 0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </nav>
     </header>
 
