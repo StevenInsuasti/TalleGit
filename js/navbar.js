@@ -84,3 +84,15 @@ if (navbarToggle && navbarLinks) {
         });
     });
 }
+
+
+// 5. Feedback visual al escribir en el buscador
+searchInput.addEventListener('input', () => {
+    if (searchInput.value.length > 0) {
+        searchButton.style.backgroundColor = '#2968c8';
+        searchButton.style.transform = 'scale(1.05)';
+    } else {
+        searchButton.style.backgroundColor = '#3483fa';
+        searchButton.style.transform = 'scale(1)';
+    }
+});
