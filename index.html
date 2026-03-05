@@ -17,32 +17,69 @@
     </header>
 
     <!-- Buscador de productos -->
-    <section id="product-search">
-        <h2>Buscar productos</h2>
-        <input type="text" placeholder="Buscar...">
-        <button>Buscar</button>
+    <section id="product-search" class="search-section">
+        <div class="search-container">
+            <form id="search-form" class="search-form" role="search">
+                <label for="search-input" class="search-label">Buscar productos</label>
+                <div class="search-input-wrapper">
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="search-input" 
+                        placeholder="Buscar productos, marcas y más..." 
+                        aria-label="Buscar productos"
+                        autocomplete="off"
+                    >
+                    <button type="submit" id="search-button" class="search-button" aria-label="Buscar">
+                        <span class="search-icon">🔍</span>
+                    </button>
+                </div>
+            </form>
+            <div id="search-results-message" class="search-message" role="status" aria-live="polite"></div>
+        </div>
     </section>
 
     <!-- Lista de productos -->
-    <section id="product-list">
+    <section id="product-list" class="product-list-section">
         <h2>Productos destacados</h2>
 
-        <div class="products">
+        <div class="products" id="products-container">
 
-            <div class="product-card">
-                <h3>Producto 1</h3>
-                <p>$100</p>
-            </div>
+            <article class="product-card" data-product-name="iPhone 14 Pro Max" data-category="tecnologia">
+                <h3>iPhone 14 Pro Max</h3>
+                <p class="price">$4.500.000</p>
+                <p class="description">Smartphone Apple última generación</p>
+            </article>
 
-            <div class="product-card">
-                <h3>Producto 2</h3>
-                <p>$200</p>
-            </div>
+            <article class="product-card" data-product-name="Samsung Galaxy S23" data-category="tecnologia">
+                <h3>Samsung Galaxy S23</h3>
+                <p class="price">$3.200.000</p>
+                <p class="description">Smartphone Samsung con cámara avanzada</p>
+            </article>
 
-            <div class="product-card">
-                <h3>Producto 3</h3>
-                <p>$300</p>
-            </div>
+            <article class="product-card" data-product-name="Laptop HP Pavilion" data-category="computacion">
+                <h3>Laptop HP Pavilion</h3>
+                <p class="price">$2.800.000</p>
+                <p class="description">Laptop para trabajo y estudio</p>
+            </article>
+
+            <article class="product-card" data-product-name="Auriculares Sony" data-category="audio">
+                <h3>Auriculares Sony</h3>
+                <p class="price">$1.200.000</p>
+                <p class="description">Auriculares con cancelación de ruido</p>
+            </article>
+
+            <article class="product-card" data-product-name="Smart TV LG 55 pulgadas" data-category="electrodomesticos">
+                <h3>Smart TV LG 55"</h3>
+                <p class="price">$2.500.000</p>
+                <p class="description">Televisor inteligente 4K</p>
+            </article>
+
+            <article class="product-card" data-product-name="PlayStation 5" data-category="gaming">
+                <h3>PlayStation 5</h3>
+                <p class="price">$2.900.000</p>
+                <p class="description">Consola de videojuegos última generación</p>
+            </article>
 
         </div>
     </section>
