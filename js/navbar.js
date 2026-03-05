@@ -43,11 +43,17 @@ searchInput.addEventListener('keypress', (e) => {
 
 // 3. Animación del buscador al hacer focus
 searchInput.addEventListener('focus', () => {
-    searchInput.parentElement.style.transform = 'scale(1.01)';
+    const navbarSearch = document.querySelector('.navbar-search');
+    if (navbarSearch) {
+        navbarSearch.style.transform = 'scale(1.02)';
+    }
 });
 
 searchInput.addEventListener('blur', () => {
-    searchInput.parentElement.style.transform = 'scale(1)';
+    const navbarSearch = document.querySelector('.navbar-search');
+    if (navbarSearch) {
+        navbarSearch.style.transform = 'scale(1)';
+    }
 });
 
 
