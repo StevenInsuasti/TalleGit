@@ -5,31 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clon MercadoLibre</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dev-portfolio-3.css">
 </head>
 <body>
 
     <!-- Navbar -->
-    <header>
-        <nav>
-            <h1>MercadoLibre Clone</h1>
+    <header class="navbar">
+        <nav class="navbar-container">
+            <!-- Logo y ubicación -->
+            <div class="navbar-top">
+                <div class="navbar-logo">
+                    <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.19.1/mercadolibre/logo__large_plus.png" alt="MercadoLibre Logo">
+                </div>
+                
+                <div class="navbar-location">
+                    <svg class="location-icon" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M8 0C5.2 0 3 2.2 3 5c0 3.9 5 11 5 11s5-7.1 5-11c0-2.8-2.2-5-5-5zm0 7.5c-1.4 0-2.5-1.1-2.5-2.5S6.6 2.5 8 2.5s2.5 1.1 2.5 2.5S9.4 7.5 8 7.5z"/>
+                    </svg>
+                    <span class="location-text">Enviar a</span>
+                    <span class="location-name">Bogotá</span>
+                </div>
+            </div>
+
+            <!-- Barra de búsqueda -->
+            <div class="navbar-search">
+                <input type="text" class="search-input" placeholder="Buscar productos, marcas y más...">
+                <button class="search-button">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M13.5 8.5c0 2.8-2.2 5-5 5s-5-2.2-5-5 2.2-5 5-5 5 2.2 5 5zm5.4 10.1l-5.4-5.4c-1 .8-2.3 1.3-3.7 1.3-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6c0 1.4-.5 2.7-1.3 3.7l5.4 5.4-1 1z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menú de navegación -->
+            <div class="navbar-menu">
+                <ul class="navbar-links">
+                    <li><a href="#" class="navbar-link">Categorías</a></li>
+                    <li><a href="#" class="navbar-link">Ofertas</a></li>
+                    <li><a href="#" class="navbar-link">Historial</a></li>
+                    <li><a href="#" class="navbar-link">Supermercado</a></li>
+                    <li><a href="#" class="navbar-link">Moda</a></li>
+                    <li><a href="#" class="navbar-link">Vender</a></li>
+                    <li><a href="#" class="navbar-link">Ayuda</a></li>
+                </ul>
+
+                <div class="navbar-user">
+                    <a href="#" class="user-link">Crea tu cuenta</a>
+                    <a href="#" class="user-link">Ingresa</a>
+                    <a href="#" class="user-link">Mis compras</a>
+                    <a href="#" class="cart-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-9.8-3.2l.9-1.6c.1-.2.4-.3.6-.3h7.4c.2 0 .5-.1.6-.3l3.9-7.1-1.7-1L14 12H8.1l-.2-.5L4.8 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2.9 0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </nav>
     </header>
 
     <!-- Buscador de productos -->
-    <section id="product-search">
-        <h2>Buscar productos</h2>
-        <input type="text" placeholder="Buscar...">
-        <button>Buscar</button>
+    <section id="product-search" class="search-section">
+        <div class="search-container">
+            <form id="search-form" class="search-form" role="search">
+                <label for="search-input" class="search-label">Buscar productos</label>
+                <div class="search-input-wrapper">
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="search-input" 
+                        placeholder="Buscar productos, marcas y más..." 
+                        aria-label="Buscar productos"
+                        autocomplete="off"
+                    >
+                    <button type="submit" id="search-button" class="search-button" aria-label="Buscar">
+                        <span class="search-icon">🔍</span>
+                    </button>
+                </div>
+            </form>
+            <div id="search-results-message" class="search-message" role="status" aria-live="polite"></div>
+        </div>
     </section>
 
     <!-- Lista de productos -->
-    <section id="product-list">
+    <section id="product-list" class="product-list-section">
         <h2>Productos destacados</h2>
 
-        <div class="products">
+        <div class="products" id="products-container">
 
             <div class="product-card">
-<<<<<<< HEAD
                 <img src="https://via.placeholder.com/200" alt="Producto 1">
                 <h3>iPhone 14 Pro Max</h3>
                 <p class="price">$4.299.000</p>
@@ -75,20 +138,6 @@
                 <p class="price">$899.000</p>
                 <p class="discount">8% OFF</p>
                 <p class="shipping">Envío gratis</p>
-
-                <h3>Producto 1</h3>
-                <p>$100</p>
-            </div>
-
-            <div class="product-card">
-                <h3>Producto 2</h3>
-                <p>$200</p>
-            </div>
-
-            <div class="product-card">
-                <h3>Producto 3</h3>
-                <p>$300</p>
->>>>>>> 5a912d6bb236ab5ab2c6c66ccc8aeb360f8c79af
             </div>
 
         </div>
@@ -98,9 +147,92 @@
     <section id="dev-portfolio">
         <h2>Nuestro equipo</h2>
 
-        <div class="developer">
-            <h3>Nombre del desarrollador</h3>
-            <p>Descripción profesional</p>
+        <div class="developers-container">
+
+            <div class="developer-card">
+                <img src="assets/img/avatar.png" alt="Avatar Steven Eraso" width="120">
+                <h3>Steven Eraso Insuasti</h3>
+                <p class="description">
+                    Desarrollador web apasionado por la creación de interfaces modernas y funcionales.
+                    Me enfoco en construir aplicaciones web eficientes, limpias y fáciles de usar.
+                </p>
+                <h4>Servicios ofrecidos</h4>
+                <ul>
+                    <li>Desarrollo de páginas web</li>
+                    <li>Diseño de interfaces UI</li>
+                    <li>Maquetación con HTML y CSS</li>
+                    <li>Integración con JavaScript</li>
+                </ul>
+                <h4>Tecnologías</h4>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                </ul>
+                <p>
+                    <strong>GitHub:</strong>
+                    <a href="https://github.com/tuusuario" target="_blank">Ver perfil</a>
+                </p>
+            </div>
+            
+            <!-- Portafolio Desarrollador 3 -->
+            <article class="developer-card" id="dev-3">
+                <div class="dev-header">
+                    <div class="dev-avatar">
+                        <img src="https://via.placeholder.com/150" alt="Hector Alejandro Riascos Insuasty">
+                    </div>
+                    <div class="dev-basic-info">
+                        <h3 class="dev-name">Hector Alejandro Riascos Insuasty</h3>
+                        <p class="dev-title">Ingeniero de Software</p>
+                        <p class="dev-level">Estudiante de quinto semestre</p>
+                    </div>
+                </div>
+                
+                <div class="dev-body">
+                    <div class="dev-description">
+                        <h4>Sobre mí</h4>
+                        <p>Desarrollador enfocado en desarrollo web y construcción de interfaces funcionales. Interesado en arquitectura de software, desarrollo frontend y colaboración en proyectos usando control de versiones con Git.</p>
+                    </div>
+                    
+                    <div class="dev-services">
+                        <h4>Servicios</h4>
+                        <ul>
+                            <li>Desarrollo de interfaces web</li>
+                            <li>Implementación de funcionalidades JavaScript</li>
+                            <li>Integración de componentes frontend</li>
+                            <li>Control de versiones con Git y GitHub</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="dev-technologies">
+                        <h4>Tecnologías</h4>
+                        <ul class="tech-list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Git</li>
+                            <li>GitHub</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="dev-contribution">
+                        <h4>Aporte al proyecto</h4>
+                        <p>Implementé la funcionalidad de búsqueda de productos (product search), desarrollando la estructura del buscador, la lógica de captura del input del usuario y el filtrado de productos. También participé en la integración de esta funcionalidad con la interfaz principal del sitio.</p>
+                    </div>
+                </div>
+                
+                <div class="dev-footer">
+                    <div class="dev-contact">
+                        <p class="contact-phone">📱 Celular: 3226679615</p>
+                    </div>
+                    <a href="https://github.com/HectorRiascos" class="dev-github" target="_blank" rel="noopener noreferrer">
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </article>
+            
         </div>
 
     </section>
