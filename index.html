@@ -5,42 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clon MercadoLibre</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/dev-portfolio-3.css">
 </head>
 <body>
 
     <!-- Navbar -->
-    <header>
-        <nav>
+    <header class="navbar" id="navbar">
+        <nav class="navbar-container">
             <h1>MercadoLibre Clone</h1>
+            
+            <div class="navbar-search">
+                <h2 class="search-title">Buscar productos</h2>
+                <div>
+                    <input type="text" class="search-input" id="searchInput" placeholder="Buscar productos, marcas y más...">
+                    <button class="search-button" id="searchButton">🔍</button>
+                </div>
+            </div>
+            
+            <ul class="navbar-links" id="navbarLinks">
+                <li><a href="#" class="nav-link">Categorías</a></li>
+                <li><a href="#" class="nav-link">Ofertas</a></li>
+                <li><a href="#" class="nav-link">Historial</a></li>
+                <li><a href="#" class="nav-link">Ayuda</a></li>
+            </ul>
+            
+            <button class="navbar-toggle" id="navbarToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
-    <!-- Buscador de productos -->
-    <section id="product-search">
-        <h2>Buscar productos</h2>
-        <input type="text" placeholder="Buscar...">
-        <button>Buscar</button>
-    </section>
-
     <!-- Lista de productos -->
-    <section id="product-list">
+    <section id="product-list" class="product-list-section">
         <h2>Productos destacados</h2>
 
-        <div class="products">
+        <div class="products" id="products-container">
+
+            <article class="product-card" data-product-name="iPhone 14 Pro Max" data-category="tecnologia">
+                <h3>iPhone 14 Pro Max</h3>
+                <p class="price">$4.500.000</p>
+                <p class="description">Smartphone Apple última generación</p>
+            </article>
+
+            <article class="product-card" data-product-name="Samsung Galaxy S23" data-category="tecnologia">
+                <h3>Samsung Galaxy S23</h3>
+                <p class="price">$3.200.000</p>
+                <p class="description">Smartphone Samsung con cámara avanzada</p>
+            </article>
+
+            <article class="product-card" data-product-name="Laptop HP Pavilion" data-category="computacion">
+                <h3>Laptop HP Pavilion</h3>
+                <p class="price">$2.800.000</p>
+                <p class="description">Laptop para trabajo y estudio</p>
+            </article>
+
+            <article class="product-card" data-product-name="Auriculares Sony" data-category="audio">
+                <h3>Auriculares Sony</h3>
+                <p class="price">$1.200.000</p>
+                <p class="description">Auriculares con cancelación de ruido</p>
+            </article>
+
+            <article class="product-card" data-product-name="Smart TV LG 55 pulgadas" data-category="electrodomesticos">
+                <h3>Smart TV LG 55"</h3>
+                <p class="price">$2.500.000</p>
+                <p class="description">Televisor inteligente 4K</p>
+            </article>
+
+            <article class="product-card" data-product-name="PlayStation 5" data-category="gaming">
+                <h3>PlayStation 5</h3>
+                <p class="price">$2.900.000</p>
+                <p class="description">Consola de videojuegos última generación</p>
+            </article>
 
             <div class="product-card">
-                <h3>Producto 1</h3>
-                <p>$100</p>
+                <img src="https://via.placeholder.com/200" alt="Producto 1">
+                <h3>iPhone 14 Pro Max</h3>
+                <p class="price">$4.299.000</p>
+                <p class="discount">12% OFF</p>
+                <p class="shipping">Envío gratis</p>
             </div>
 
             <div class="product-card">
-                <h3>Producto 2</h3>
-                <p>$200</p>
+                <img src="https://via.placeholder.com/200" alt="Producto 2">
+                <h3>Samsung Galaxy S23 Ultra</h3>
+                <p class="price">$3.899.000</p>
+                <p class="discount">15% OFF</p>
+                <p class="shipping">Envío gratis</p>
             </div>
 
             <div class="product-card">
-                <h3>Producto 3</h3>
-                <p>$300</p>
+                <img src="https://via.placeholder.com/200" alt="Producto 3">
+                <h3>MacBook Air M2</h3>
+                <p class="price">$5.499.000</p>
+                <p class="discount">10% OFF</p>
+                <p class="shipping">Envío gratis</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="Producto 4">
+                <h3>PlayStation 5</h3>
+                <p class="price">$2.599.000</p>
+                <p class="discount">5% OFF</p>
+                <p class="shipping">Envío gratis</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="Producto 5">
+                <h3>Smart TV Samsung 55"</h3>
+                <p class="price">$1.899.000</p>
+                <p class="discount">20% OFF</p>
+                <p class="shipping">Envío gratis</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="Producto 6">
+                <h3>AirPods Pro 2</h3>
+                <p class="price">$899.000</p>
+                <p class="discount">8% OFF</p>
+                <p class="shipping">Envío gratis</p>
             </div>
 
         </div>
@@ -50,9 +135,105 @@
     <section id="dev-portfolio">
         <h2>Nuestro equipo</h2>
 
-        <div class="developer">
-            <h3>Nombre del desarrollador</h3>
-            <p>Descripción profesional</p>
+        <div class="developers-container">
+
+            <div class="developer-card">
+
+                <img src="assets/img/avatar.png" alt="Avatar Steven Eraso" width="120">
+
+                <h3>Steven Eraso Insuasti</h3>
+
+                <img src="assets/img/avatar.png" alt="Avatar Steven Eraso" width="120">
+                <h3>Steven Eraso Insuasti</h3>
+                <p class="description">
+                    Desarrollador web apasionado por la creación de interfaces modernas y funcionales.
+                    Me enfoco en construir aplicaciones web eficientes, limpias y fáciles de usar.
+                </p>
+
+                <h4>Servicios ofrecidos</h4>
+                <ul>
+                    <li>Desarrollo de páginas web</li>
+                    <li>Diseño de interfaces UI</li>
+                    <li>Maquetación con HTML y CSS</li>
+                    <li>Integración con JavaScript</li>
+                </ul>
+
+                <h4>Tecnologías</h4>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                </ul>
+
+                <p>
+                    <strong>GitHub:</strong>
+                    <a href="https://github.com/tuusuario" target="_blank">
+                        Ver perfil
+                    </a>
+                <p>
+                    <strong>GitHub:</strong>
+                    <a href="https://github.com/tuusuario" target="_blank">Ver perfil</a>
+                </p>
+            </div>
+            
+            <!-- Portafolio Desarrollador 3 -->
+            <article class="developer-card" id="dev-3">
+                <div class="dev-header">
+                    <div class="dev-avatar">
+                        <img src="https://via.placeholder.com/150" alt="Hector Alejandro Riascos Insuasty">
+                    </div>
+                    <div class="dev-basic-info">
+                        <h3 class="dev-name">Hector Alejandro Riascos Insuasty</h3>
+                        <p class="dev-title">Ingeniero de Software</p>
+                        <p class="dev-level">Estudiante de quinto semestre</p>
+                    </div>
+                </div>
+                
+                <div class="dev-body">
+                    <div class="dev-description">
+                        <h4>Sobre mí</h4>
+                        <p>Desarrollador enfocado en desarrollo web y construcción de interfaces funcionales. Interesado en arquitectura de software, desarrollo frontend y colaboración en proyectos usando control de versiones con Git.</p>
+                    </div>
+                    
+                    <div class="dev-services">
+                        <h4>Servicios</h4>
+                        <ul>
+                            <li>Desarrollo de interfaces web</li>
+                            <li>Implementación de funcionalidades JavaScript</li>
+                            <li>Integración de componentes frontend</li>
+                            <li>Control de versiones con Git y GitHub</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="dev-technologies">
+                        <h4>Tecnologías</h4>
+                        <ul class="tech-list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Git</li>
+                            <li>GitHub</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="dev-contribution">
+                        <h4>Aporte al proyecto</h4>
+                        <p>Implementé la funcionalidad de búsqueda de productos (product search), desarrollando la estructura del buscador, la lógica de captura del input del usuario y el filtrado de productos. También participé en la integración de esta funcionalidad con la interfaz principal del sitio.</p>
+                    </div>
+                </div>
+                
+                <div class="dev-footer">
+                    <div class="dev-contact">
+                        <p class="contact-phone">📱 Celular: 3226679615</p>
+                    </div>
+                    <a href="https://github.com/HectorRiascos" class="dev-github" target="_blank" rel="noopener noreferrer">
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </article>
+            
         </div>
 
     </section>
@@ -62,6 +243,7 @@
         <p>Proyecto académico - Clon MercadoLibre</p>
     </footer>
 
+    <script src="js/navbar.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
