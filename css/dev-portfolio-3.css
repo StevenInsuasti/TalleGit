@@ -1,30 +1,17 @@
 /* Estilos para el portafolio del desarrollador 3 */
 #dev-3 {
-    background: linear-gradient(135deg, #e6ffe6 0%, #ffffff 100%);
-    border-radius: 16px;
-    padding: 32px;
-    box-shadow: 0 8px 24px rgba(0, 166, 80, 0.15);
+    background: white;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     margin-bottom: 24px;
-    transition: all 0.4s ease;
-    border: 2px solid #00a650;
-    position: relative;
-    overflow: hidden;
-}
-
-#dev-3::before {
-    content: '';
-    position: absolute;
-    bottom: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(0, 166, 80, 0.1) 0%, transparent 70%);
-    animation: rotate 20s linear infinite;
+    transition: all 0.3s ease;
+    border-top: 4px solid #00a650;
 }
 
 #dev-3:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 32px rgba(0, 166, 80, 0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 #dev-3 .dev-header {
@@ -32,32 +19,21 @@
     gap: 24px;
     margin-bottom: 28px;
     align-items: center;
-    position: relative;
-    z-index: 1;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 #dev-3 .dev-avatar {
     flex-shrink: 0;
-    position: relative;
-}
-
-#dev-3 .dev-avatar::after {
-    content: '';
-    position: absolute;
-    inset: -4px;
-    border-radius: 50%;
-    background: linear-gradient(45deg, #00a650, #00d66c);
-    z-index: -1;
-    animation: pulse 2s ease-in-out infinite;
 }
 
 #dev-3 .dev-avatar img {
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 3px solid #f5f5f5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 #dev-3 .dev-basic-info {
@@ -65,36 +41,26 @@
 }
 
 #dev-3 .dev-name {
-    font-size: 28px;
+    font-size: 26px;
     color: #333;
     margin-bottom: 8px;
-    font-weight: 700;
-    background: linear-gradient(135deg, #333 0%, #00a650 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-weight: 600;
 }
 
 #dev-3 .dev-title {
-    font-size: 17px;
-    color: #00a650;
+    font-size: 16px;
+    color: #666;
     margin-bottom: 6px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 #dev-3 .dev-level {
     font-size: 14px;
-    color: #666;
-    background: rgba(0, 166, 80, 0.15);
-    padding: 4px 12px;
-    border-radius: 12px;
-    display: inline-block;
+    color: #999;
 }
 
 #dev-3 .dev-body {
     margin-bottom: 24px;
-    position: relative;
-    z-index: 1;
 }
 
 #dev-3 .dev-body > div {
@@ -102,24 +68,19 @@
 }
 
 #dev-3 .dev-body h4 {
-    font-size: 18px;
+    font-size: 17px;
     color: #333;
     margin-bottom: 12px;
-    font-weight: 700;
-    border-bottom: 3px solid #00a650;
+    font-weight: 600;
     padding-bottom: 8px;
-    display: inline-block;
+    border-bottom: 2px solid #f5f5f5;
 }
 
 #dev-3 .dev-description p,
 #dev-3 .dev-contribution p {
     font-size: 15px;
-    color: #555;
+    color: #666;
     line-height: 1.7;
-    background: rgba(255, 255, 255, 0.6);
-    padding: 16px;
-    border-radius: 12px;
-    border-left: 4px solid #00a650;
 }
 
 #dev-3 .dev-services ul,
@@ -130,16 +91,10 @@
 
 #dev-3 .dev-services li {
     font-size: 15px;
-    color: #555;
-    padding: 10px 0;
-    padding-left: 28px;
+    color: #666;
+    padding: 8px 0;
+    padding-left: 24px;
     position: relative;
-    transition: all 0.3s ease;
-}
-
-#dev-3 .dev-services li:hover {
-    padding-left: 32px;
-    color: #333;
 }
 
 #dev-3 .dev-services li:before {
@@ -148,7 +103,7 @@
     left: 0;
     color: #00a650;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 #dev-3 .tech-list {
@@ -158,20 +113,17 @@
 }
 
 #dev-3 .tech-list li {
-    background: linear-gradient(135deg, #00a650 0%, #00d66c 100%);
+    background: #f5f5f5;
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 14px;
-    color: white;
-    font-weight: 600;
-    border: none;
-    box-shadow: 0 2px 8px rgba(0, 166, 80, 0.3);
-    transition: all 0.3s ease;
+    color: #555;
+    font-weight: 500;
+    transition: all 0.2s ease;
 }
 
 #dev-3 .tech-list li:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 166, 80, 0.5);
+    background: #e8e8e8;
 }
 
 #dev-3 .dev-footer {
@@ -179,35 +131,30 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 20px;
-    border-top: 2px solid rgba(0, 166, 80, 0.3);
-    position: relative;
-    z-index: 1;
+    border-top: 1px solid #f0f0f0;
 }
 
 #dev-3 .contact-phone {
     font-size: 15px;
-    color: #555;
-    font-weight: 500;
+    color: #666;
 }
 
 #dev-3 .dev-github {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 24px;
-    background: linear-gradient(135deg, #333 0%, #000 100%);
+    gap: 8px;
+    padding: 10px 20px;
+    background: #333;
     color: white;
     text-decoration: none;
-    border-radius: 25px;
-    font-size: 15px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
 }
 
 #dev-3 .dev-github:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    background: #000;
 }
 
 @media (max-width: 768px) {
