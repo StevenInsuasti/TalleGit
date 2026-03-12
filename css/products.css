@@ -1,0 +1,325 @@
+/* Estilos para la sección de productos */
+
+.product-list-section {
+    padding: 40px 20px;
+    background-color: #ebebeb;
+}
+
+.product-list-section h2 {
+    text-align: left;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 26px;
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contenedor de productos */
+.products {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 8px 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products::-webkit-scrollbar {
+    display: none;
+}
+
+/* Tarjetas de productos - Estilo MercadoLibre Poly Card */
+.poly-card {
+    background-color: #fff;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    min-width: 224px;
+    max-width: 224px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.poly-card:hover {
+    box-shadow: 0 7px 16px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Portada de la tarjeta */
+.poly-card__portada {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.poly-card__portada--grid-height {
+    padding-top: 100%;
+}
+
+.poly-component__image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.poly-component__picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+}
+
+/* Contenido de la tarjeta */
+.poly-card__content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.poly-component__title {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.35;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif;
+    margin-bottom: 4px;
+}
+
+.poly-component__title:hover {
+    color: #3483fa;
+}
+
+/* Precios */
+.poly-component__price {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.andes-money-amount--previous {
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 12px;
+    text-decoration: line-through;
+    font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif;
+}
+
+.poly-price__current {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.andes-money-amount--cents-superscript {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif;
+}
+
+.andes-money-amount__currency-symbol {
+    font-size: inherit;
+}
+
+.andes-money-amount__fraction {
+    font-size: inherit;
+}
+
+.andes-money-amount__discount {
+    background-color: rgba(0, 166, 80, 0.15);
+    color: #00a650;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif;
+}
+
+.poly-price__disc--pill {
+    background-color: rgba(0, 166, 80, 0.15);
+    color: #00a650;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.poly-price__installments {
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 12px;
+    font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif;
+}
+
+.poly-phrase-price {
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: 400;
+}
+
+/* Envío */
+.poly-component__shipping {
+    color: #00a650;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Animación fade-in para productos */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-card.fade-in {
+    animation: fadeIn 0.4s ease;
+}
+
+/* Mensaje de no hay resultados */
+.no-results-message {
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 18px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif;
+}
+
+/* Efecto focus en el buscador */
+.search-input.search-focused {
+    transform: scale(1.02);
+    border-color: #3483fa;
+    box-shadow: 0 0 0 3px rgba(52, 131, 250, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .products {
+        gap: 12px;
+    }
+    
+    .product-card {
+        min-width: 156px;
+        max-width: 156px;
+        padding: 12px;
+    }
+    
+    .product-card img {
+        height: 156px;
+    }
+    
+    .product-card h3 {
+        font-size: 13px;
+    }
+    
+    .product-card .price {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        min-width: 140px;
+        max-width: 140px;
+    }
+}
+
+
+/* Animación fade-in para productos */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.poly-card.fade-in {
+    animation: fadeIn 0.4s ease;
+}
+
+/* Mensaje de no hay resultados */
+.no-results-message {
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 18px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .products {
+        gap: 12px;
+    }
+    
+    .poly-card {
+        min-width: 156px;
+        max-width: 156px;
+    }
+    
+    .poly-card__portada {
+        padding-top: 100%;
+    }
+    
+    .poly-card__content {
+        padding: 12px;
+    }
+    
+    .poly-component__title {
+        font-size: 13px;
+    }
+    
+    .andes-money-amount--cents-superscript {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .poly-card {
+        min-width: 140px;
+        max-width: 140px;
+    }
+    
+    .poly-card__content {
+        padding: 10px;
+    }
+}
