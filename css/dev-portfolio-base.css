@@ -1,0 +1,41 @@
+/* Estilos base para todos los portfolios de desarrolladores */
+
+#dev-portfolio {
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+}
+
+#dev-portfolio h2 {
+    text-align: center;
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.developers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.developer-card {
+    background: white;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.developer-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 768px) {
+    .developers-container {
+        padding: 0 10px;
+    }
+}
