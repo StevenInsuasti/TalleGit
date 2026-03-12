@@ -1,4 +1,11 @@
 /* Estilos para el portafolio del desarrollador 3 */
 #dev-3 {
-    border-top: 4px solid #00a650;
+    border-top: 4px solid #00a650 !important;
+}
+
+#dev-3 .dev-contribution {
+    background: #fafafa !important;
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 3px solid #00a650 !important;
 }
