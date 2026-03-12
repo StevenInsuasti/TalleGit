@@ -1,0 +1,48 @@
+/* Estilos para el portafolio del desarrollador 4 - Tatiana Torres Gomez */
+
+#dev-4 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+#dev-4 .dev-header {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+#dev-4 .dev-name {
+    color: white;
+    font-size: 24px;
+}
+
+#dev-4 .dev-title,
+#dev-4 .dev-level {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#dev-4 h4 {
+    color: white;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+#dev-4 .tech-list li {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#dev-4 .dev-github {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+#dev-4 .dev-github:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+#dev-4 .contact-phone {
+    color: rgba(255, 255, 255, 0.95);
+}
