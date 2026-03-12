@@ -43,6 +43,13 @@
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 10px;
+    background-color: #f0f0f0;
+    display: block;
+}
+
+.product-card img:not([src]), .product-card img[src=""] {
+    background: linear-gradient(135deg, #f0f0f0 25%, #e0e0e0 25%, #e0e0e0 50%, #f0f0f0 50%, #f0f0f0 75%, #e0e0e0 75%, #e0e0e0);
+    background-size: 40px 40px;
 }
 
 .product-card h3 {
