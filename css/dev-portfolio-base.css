@@ -34,8 +34,203 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
+/* Header común */
+.developer-card .dev-header,
+.developer-card .developer-header {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 28px;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.developer-card .dev-avatar,
+.developer-card .developer-avatar {
+    flex-shrink: 0;
+}
+
+.developer-card .dev-avatar img,
+.developer-card .developer-avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f5f5f5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.developer-card .dev-basic-info,
+.developer-card .developer-title {
+    flex: 1;
+}
+
+.developer-card .dev-name,
+.developer-card .developer-name {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.developer-card .dev-title,
+.developer-card .developer-role {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.developer-card .dev-level,
+.developer-card .developer-level {
+    font-size: 14px;
+    color: #999;
+}
+
+/* Body común */
+.developer-card .dev-body,
+.developer-card .developer-description,
+.developer-card .developer-services,
+.developer-card .developer-technologies,
+.developer-card .developer-contributions {
+    margin-bottom: 24px;
+}
+
+.developer-card .dev-body > div {
+    margin-bottom: 24px;
+}
+
+.developer-card h4 {
+    font-size: 17px;
+    color: #333;
+    margin-bottom: 12px;
+    font-weight: 600;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f5f5f5;
+}
+
+.developer-card .dev-description p,
+.developer-card .dev-contribution p,
+.developer-card .developer-description p,
+.developer-card .developer-contributions p,
+.developer-card .contribution-item p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Servicios */
+.developer-card .dev-services ul,
+.developer-card .developer-services ul,
+.developer-card .dev-technologies ul {
+    list-style: none;
+    padding: 0;
+}
+
+.developer-card .dev-services li,
+.developer-card .developer-services li {
+    font-size: 15px;
+    color: #666;
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.developer-card .dev-services li:before,
+.developer-card .developer-services li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #00a650;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Tecnologías */
+.developer-card .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.developer-card .tech-list li,
+.developer-card .tech-badge {
+    background: #f5f5f5;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    list-style: none;
+}
+
+.developer-card .tech-list li:hover,
+.developer-card .tech-badge:hover {
+    background: #e8e8e8;
+}
+
+/* Footer común */
+.developer-card .dev-footer,
+.developer-card .developer-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.developer-card .contact-phone,
+.developer-card .developer-contact p {
+    font-size: 15px;
+    color: #666;
+}
+
+.developer-card .dev-github,
+.developer-card .github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.developer-card .dev-github:hover,
+.developer-card .github-link:hover {
+    background: #000;
+}
+
+.developer-card .contribution-item {
+    background: #fafafa;
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 3px solid #3483fa;
+}
+
 @media (max-width: 768px) {
     .developers-container {
         padding: 0 10px;
+    }
+    
+    .developer-card .dev-header,
+    .developer-card .developer-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .developer-card .dev-footer,
+    .developer-card .developer-contact {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .developer-card .tech-list {
+        justify-content: center;
     }
 }
