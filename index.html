@@ -18,15 +18,19 @@
     <!-- Navbar -->
     <header class="navbar" id="navbar">
         <nav class="navbar-container">
-            <h1>MercadoLibre Clone</h1>
-            
-            <div class="navbar-search">
-                <h2 class="search-title">Buscar productos</h2>
-                <div>
-                    <input type="text" class="search-input" id="searchInput" placeholder="Buscar productos, marcas y más...">
-                    <button class="search-button" id="searchButton">🔍</button>
-                </div>
+            <div class="navbar-logo">
+                <img src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/7.18.0/mercadolibre/logo_large_plus@2x.webp" alt="MercadoLibre">
             </div>
+            
+            <form class="nav-search" role="search" action="#" method="GET">
+                <label class="nav-header-visually-hidden" for="cb1-edit">Ingresa lo que quieras encontrar</label>
+                <input type="text" class="nav-search-input" id="cb1-edit" placeholder="Buscar productos, marcas y más..." maxlength="120" autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="off" name="as_word" value="" aria-activedescendant="" aria-autocomplete="list" aria-expanded="false" role="combobox">
+                <button class="nav-search-clear-btn" type="button" title="Limpiar"></button>
+                <button class="nav-search-close-btn" type="button" title="Cerrar"></button>
+                <button type="submit" class="nav-search-btn">
+                    <div role="img" aria-label="Buscar" class="nav-icon-search"></div>
+                </button>
+            </form>
             
             <ul class="navbar-links" id="navbarLinks">
                 <li><a href="#" class="nav-link">Categorías</a></li>
@@ -49,52 +53,202 @@
 
         <div class="products" id="products-container">
 
-            <div class="product-card">
-                <img src="https://exitocol.vtexassets.com/arquivos/ids/27277153/iphone-14-pro-max-256gb-oro-reacondicionado.jpg?v=638803265871900000" alt="iPhone 14 Pro Max">
-                <h3>iPhone 14 Pro Max</h3>
-                <p class="price">$4.299.000</p>
-                <p class="discount">12% OFF</p>
-                <p class="shipping">Envío gratis</p>
+            <div class="poly-card poly-card--grid poly-card--large poly-card--mobile">
+                <div class="poly-card__portada poly-card__portada--grid-height">
+                    <span class="poly-component__image-overlay"></span>
+                    <img class="poly-component__picture poly-component__picture--contain" 
+                         alt="iPhone 14 Pro Max 256GB Oro Reacondicionado" 
+                         loading="lazy" 
+                         src="https://exitocol.vtexassets.com/arquivos/ids/27277153/iphone-14-pro-max-256gb-oro-reacondicionado.jpg?v=638803265871900000">
+                </div>
+                <div class="poly-card__content">
+                    <a href="#" class="poly-component__title">iPhone 14 Pro Max 256GB Oro Reacondicionado</a>
+                    <div class="poly-component__price">
+                        <s class="andes-money-amount andes-money-amount--previous">
+                            <span class="andes-money-amount__currency-symbol">$</span>
+                            <span class="andes-money-amount__fraction">4.899.000</span>
+                        </s>
+                        <div class="poly-price__current">
+                            <span class="andes-money-amount andes-money-amount--cents-superscript">
+                                <span class="andes-money-amount__currency-symbol">$</span>
+                                <span class="andes-money-amount__fraction">4.299.000</span>
+                            </span>
+                            <span class="andes-money-amount__discount poly-price__disc--pill">12% OFF</span>
+                        </div>
+                        <span class="poly-price__installments">3 cuotas de <span class="andes-money-amount poly-phrase-price">
+                            <span class="andes-money-amount__currency-symbol">$</span>
+                            <span class="andes-money-amount__fraction">1.433.000</span>
+                        </span> con 0% interés</span>
+                    </div>
+                    <div class="poly-component__shipping">
+                        <span>Envío gratis</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="product-card">
-                <img src="https://http2.mlstatic.com/D_NQ_NP_682320-MLA99454593622_112025-O.webp" alt="Samsung Galaxy S23 Ultra">
-                <h3>Samsung Galaxy S23 Ultra</h3>
-                <p class="price">$3.899.000</p>
-                <p class="discount">15% OFF</p>
-                <p class="shipping">Envío gratis</p>
+            <div class="poly-card poly-card--grid poly-card--large poly-card--mobile">
+                <div class="poly-card__portada poly-card__portada--grid-height">
+                    <span class="poly-component__image-overlay"></span>
+                    <img class="poly-component__picture poly-component__picture--contain" 
+                         alt="Samsung Galaxy S23 Ultra 256GB" 
+                         loading="lazy" 
+                         src="https://http2.mlstatic.com/D_NQ_NP_682320-MLA99454593622_112025-O.webp">
+                </div>
+                <div class="poly-card__content">
+                    <a href="#" class="poly-component__title">Samsung Galaxy S23 Ultra 256GB</a>
+                    <div class="poly-component__price">
+                        <s class="andes-money-amount andes-money-amount--previous">
+                            <span class="andes-money-amount__currency-symbol">$</span>
+                            <span class="andes-money-amount__fraction">4.587.000</span>
+                        </s>
+                        <div class="poly-price__current">
+                            <span class="andes-money-amount andes-money-amount--cents-superscript">
+                                <span class="andes-money-amount__currency-symbol">$</span>
+                                <span class="andes-money-amount__fraction">3.899.000</span>
+                            </span>
+                            <span class="andes-money-amount__discount poly-price__disc--pill">15% OFF</span>
+                        </div>
+                        <span class="poly-price__installments">3 cuotas de <span class="andes-money-amount poly-phrase-price">
+                            <span class="andes-money-amount__currency-symbol">$</span>
+                            <span class="andes-money-amount__fraction">1.299.667</span>
+                        </span> con 0% interés</span>
+                    </div>
+                    <div class="poly-component__shipping">
+                        <span>Envío gratis</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="product-card">
-                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-macbook-air-m2-midnight-202208?wid=4000&hei=3072&fmt=jpeg&qlt=90&.v=1659114484307" alt="MacBook Air M2">
-                <h3>MacBook Air M2</h3>
-                <p class="price">$5.499.000</p>
-                <p class="discount">10% OFF</p>
-                <p class="shipping">Envío gratis</p>
+            <div class="poly-card poly-card--grid poly-card--large poly-card--mobile">
+                <div class="poly-card__portada poly-card__portada--grid-height">
+                    <span class="poly-component__image-overlay"></span>
+                    <img class="poly-component__picture poly-component__picture--contain" 
+                         alt="MacBook Air M2 13 pulgadas 256GB" 
+                         loading="lazy" 
+                         src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-macbook-air-m2-midnight-202208?wid=4000&hei=3072&fmt=jpeg&qlt=90&.v=1659114484307">
+                </div>
+                <div class="poly-card__content">
+                    <a href="#" class="poly-component__title">MacBook Air M2 13 pulgadas 256GB</a>
+                    <div class="poly-component__price">
+                        <s class="andes-money-amount andes-money-amount--previous">
+                            <span class="andes-money-amount__currency-symbol">$</span>
+                            <span class="andes-money-amount__fraction">6.110.000</span>
+                        </s>
+                        <div class="poly-price__current">
+                            <span class="andes-money-amount andes-money-amount--cents-superscript">
+                                <span class="andes-money-amount__currency-symbol">$</span>
+                                <span class="andes-money-amount__fraction">5.499.000</span>
+                            </span>
+                            <span class="andes-money-amount__discount poly-price__disc--pill">10% OFF</span>
+                        </div>
+                        <span class="poly-price__installments">3 cuotas de <span class="andes-money-amount poly-phrase-price">
+                            <span class="andes-money-amount__currency-symbol">$</span>
+                            <span class="andes-money-amount__fraction">1.833.000</span>
+                        </span> con 0% interés</span>
+                    </div>
+                    <div class="poly-component__shipping">
+                        <span>Envío gratis</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="product-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEFEg_XFU1dUEWxHYorlN3Gl4-isYbI0bwtg&s" alt="PlayStation 5">
-                <h3>PlayStation 5</h3>
-                <p class="price">$2.599.000</p>
-                <p class="discount">5% OFF</p>
-                <p class="shipping">Envío gratis</p>
+            <div class="poly-card poly-card--grid poly-card--large poly-card--mobile">
+                <div class="poly-card__portada poly-card__portada--grid-height">
+                    <span class="poly-component__image-overlay"></span>
+                    <img class="poly-component__picture poly-component__picture--contain" 
+                         alt="PlayStation 5 Consola Standard" 
+                         loading="lazy" 
+                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEFEg_XFU1dUEWxHYorlN3Gl4-isYbI0bwtg&s">
+                </div>
+                <div class="poly-card__content">
+                    <a href="#" class="poly-component__title">PlayStation 5 Consola Standard</a>
+                    <div class="poly-component__price">
+                        <s class="andes-money-amount andes-money-amount--previous">
+                            <span class="andes-money-amount__currency-symbol">$</span>
+                            <span class="andes-money-amount__fraction">2.735.789</span>
+                        </s>
+                        <div class="poly-price__current">
+                            <span class="andes-money-amount andes-money-amount--cents-superscript">
+                                <span class="andes-money-amount__currency-symbol">$</span>
+                                <span class="andes-money-amount__fraction">2.599.000</span>
+                            </span>
+                            <span class="andes-money-amount__discount poly-price__disc--pill">5% OFF</span>
+                        </div>
+                        <span class="poly-price__installments">3 cuotas de <span class="andes-money-amount poly-phrase-price">
+                            <span class="andes-money-amount__currency-symbol">$</span>
+                            <span class="andes-money-amount__fraction">866.333</span>
+                        </span> con 0% interés</span>
+                    </div>
+                    <div class="poly-component__shipping">
+                        <span>Envío gratis</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="product-card">
-                <img src="https://exitocol.vtexassets.com/arquivos/ids/31380851/TV-QLED-55-140-CM-UHD-4K-SAMSUNG-55-Pulgadas-QLED-Uhd-4K-Smart-TV-QN55Q60DAKXZL-3569034_a.jpg?v=638999344044830000" alt="Smart TV Samsung 55">
-                <h3>Smart TV Samsung 55"</h3>
-                <p class="price">$1.899.000</p>
-                <p class="discount">20% OFF</p>
-                <p class="shipping">Envío gratis</p>
+            <div class="poly-card poly-card--grid poly-card--large poly-card--mobile">
+                <div class="poly-card__portada poly-card__portada--grid-height">
+                    <span class="poly-component__image-overlay"></span>
+                    <img class="poly-component__picture poly-component__picture--contain" 
+                         alt="Smart TV Samsung 55 QLED UHD 4K" 
+                         loading="lazy" 
+                         src="https://exitocol.vtexassets.com/arquivos/ids/31380851/TV-QLED-55-140-CM-UHD-4K-SAMSUNG-55-Pulgadas-QLED-Uhd-4K-Smart-TV-QN55Q60DAKXZL-3569034_a.jpg?v=638999344044830000">
+                </div>
+                <div class="poly-card__content">
+                    <a href="#" class="poly-component__title">Smart TV Samsung 55" QLED UHD 4K</a>
+                    <div class="poly-component__price">
+                        <s class="andes-money-amount andes-money-amount--previous">
+                            <span class="andes-money-amount__currency-symbol">$</span>
+                            <span class="andes-money-amount__fraction">2.373.750</span>
+                        </s>
+                        <div class="poly-price__current">
+                            <span class="andes-money-amount andes-money-amount--cents-superscript">
+                                <span class="andes-money-amount__currency-symbol">$</span>
+                                <span class="andes-money-amount__fraction">1.899.000</span>
+                            </span>
+                            <span class="andes-money-amount__discount poly-price__disc--pill">20% OFF</span>
+                        </div>
+                        <span class="poly-price__installments">3 cuotas de <span class="andes-money-amount poly-phrase-price">
+                            <span class="andes-money-amount__currency-symbol">$</span>
+                            <span class="andes-money-amount__fraction">633.000</span>
+                        </span> con 0% interés</span>
+                    </div>
+                    <div class="poly-component__shipping">
+                        <span>Envío gratis</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="product-card">
-                <img src="https://mac-center.com/cdn/shop/files/AirPods_Pro_en_su_estuche_con_MagSafe.jpg?v=1742255727&width=1445" alt="AirPods Pro 2">
-                <h3>AirPods Pro 2</h3>
-                <p class="price">$899.000</p>
-                <p class="discount">8% OFF</p>
-                <p class="shipping">Envío gratis</p>
+            <div class="poly-card poly-card--grid poly-card--large poly-card--mobile">
+                <div class="poly-card__portada poly-card__portada--grid-height">
+                    <span class="poly-component__image-overlay"></span>
+                    <img class="poly-component__picture poly-component__picture--contain" 
+                         alt="AirPods Pro 2 con MagSafe" 
+                         loading="lazy" 
+                         src="https://mac-center.com/cdn/shop/files/AirPods_Pro_en_su_estuche_con_MagSafe.jpg?v=1742255727&width=1445">
+                </div>
+                <div class="poly-card__content">
+                    <a href="#" class="poly-component__title">AirPods Pro 2 con MagSafe</a>
+                    <div class="poly-component__price">
+                        <s class="andes-money-amount andes-money-amount--previous">
+                            <span class="andes-money-amount__currency-symbol">$</span>
+                            <span class="andes-money-amount__fraction">977.174</span>
+                        </s>
+                        <div class="poly-price__current">
+                            <span class="andes-money-amount andes-money-amount--cents-superscript">
+                                <span class="andes-money-amount__currency-symbol">$</span>
+                                <span class="andes-money-amount__fraction">899.000</span>
+                            </span>
+                            <span class="andes-money-amount__discount poly-price__disc--pill">8% OFF</span>
+                        </div>
+                        <span class="poly-price__installments">3 cuotas de <span class="andes-money-amount poly-phrase-price">
+                            <span class="andes-money-amount__currency-symbol">$</span>
+                            <span class="andes-money-amount__fraction">299.667</span>
+                        </span> con 0% interés</span>
+                    </div>
+                    <div class="poly-component__shipping">
+                        <span>Envío gratis</span>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -109,7 +263,7 @@
             <article class="developer-card" id="dev-1">
                 <div class="dev-header">
                     <div class="dev-avatar">
-                        <img src="assets/img/avatar.png" alt="Steven Eraso Insuasti">
+                        <img src="https://cdn.picrew.me/shareImg/org/202603/1868017_C3RYFmMR.png" alt="Steven Eraso Insuasti">
                     </div>
                     <div class="dev-basic-info">
                         <h3 class="dev-name">Steven Eraso Insuasti</h3>
@@ -165,7 +319,7 @@
             <article class="developer-card" id="dev-2">
                 <div class="developer-header">
                     <div class="developer-avatar">
-                        <img src="https://via.placeholder.com/150" alt="Sebastian Orlando Manchabajoy">
+                        <img src="https://cdn.picrew.me/shareImg/org/202603/1564386_HzwDTpUt.png" alt="Sebastian Orlando Manchabajoy">
                     </div>
                     <div class="developer-title">
                         <h3 class="developer-name">Sebastian Orlando Manchabajoy</h3>
@@ -277,7 +431,7 @@
             <article class="developer-card" id="dev-4">
                 <div class="dev-header">
                     <div class="dev-avatar">
-                        <img src="https://via.placeholder.com/150" alt="Tatiana Torres Gomez">
+                        <img src="https://cdn.picrew.me/shareImg/org/202603/43383_zHWfr2hG.png" alt="Tatiana Torres Gomez">
                     </div>
                     <div class="dev-basic-info">
                         <h3 class="dev-name">Tatiana Torres Gomez</h3>
