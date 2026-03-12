@@ -59,6 +59,11 @@
     margin: 5px 0;
 }
 
+.product-card .price::before {
+    content: '💵 ';
+    font-size: 20px;
+}
+
 .product-card .description {
     color: #666;
     font-size: 14px;
@@ -72,10 +77,20 @@
     margin: 5px 0;
 }
 
+.product-card .discount::before {
+    content: '🏷️ ';
+    font-size: 14px;
+}
+
 .product-card .shipping {
     color: #00a650;
     font-size: 14px;
     margin: 5px 0;
+}
+
+.product-card .shipping::before {
+    content: '🚚 ';
+    font-size: 14px;
 }
 
 /* Animación fade-in para productos */
