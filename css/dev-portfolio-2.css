@@ -1,0 +1,191 @@
+/* Estilos para el portafolio del desarrollador 2 */
+#dev-2 {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#dev-2:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+#dev-2 .developer-header {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+#dev-2 .developer-avatar {
+    flex-shrink: 0;
+}
+
+#dev-2 .developer-avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3483fa;
+}
+
+#dev-2 .developer-title {
+    flex: 1;
+}
+
+#dev-2 .developer-name {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+#dev-2 .developer-role {
+    font-size: 16px;
+    color: #3483fa;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+#dev-2 .developer-level {
+    font-size: 14px;
+    color: #666;
+}
+
+#dev-2 .developer-description,
+#dev-2 .developer-services,
+#dev-2 .developer-technologies,
+#dev-2 .developer-contact,
+#dev-2 .developer-contributions {
+    margin-bottom: 20px;
+}
+
+#dev-2 h4 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+    border-bottom: 2px solid #3483fa;
+    padding-bottom: 6px;
+}
+
+#dev-2 h5 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+#dev-2 h6 {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+#dev-2 .developer-description p,
+#dev-2 .developer-contributions p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+#dev-2 .developer-services ul,
+#dev-2 .developer-contributions ul {
+    list-style: none;
+    padding: 0;
+}
+
+#dev-2 .developer-services li {
+    font-size: 14px;
+    color: #666;
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+#dev-2 .developer-services li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #00a650;
+    font-weight: bold;
+}
+
+#dev-2 .developer-contributions ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+#dev-2 .developer-contributions li {
+    font-size: 14px;
+    color: #666;
+    padding: 4px 0;
+    line-height: 1.5;
+}
+
+#dev-2 .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#dev-2 .tech-badge {
+    background: #f5f5f5;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 13px;
+    color: #333;
+    border: 1px solid #e0e0e0;
+    display: inline-block;
+}
+
+#dev-2 .developer-contact p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+#dev-2 .github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+#dev-2 .github-link:hover {
+    background: #000;
+}
+
+#dev-2 .github-link svg {
+    fill: white;
+}
+
+#dev-2 .contribution-item {
+    background: #f9f9f9;
+    padding: 16px;
+    border-radius: 6px;
+    border-left: 4px solid #3483fa;
+}
+
+@media (max-width: 768px) {
+    #dev-2 .developer-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #dev-2 .tech-list {
+        justify-content: center;
+    }
+}
