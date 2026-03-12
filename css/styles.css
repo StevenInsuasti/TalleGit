@@ -6,9 +6,10 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif;
     background-color: #ebebeb;
     color: #333;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Footer Styles */

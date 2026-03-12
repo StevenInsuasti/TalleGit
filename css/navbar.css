@@ -5,6 +5,24 @@
     transition: all 0.3s ease;
     position: relative;
     z-index: 1000;
+    font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar-logo img {
+    height: 34px;
+    width: auto;
+    transition: transform 0.2s ease;
+}
+
+.navbar-logo img:hover {
+    transform: scale(1.05);
 }
 
 .navbar-container {
@@ -41,13 +59,13 @@
     background-color: #ffe600;
 }
 
-/* Contenedor del buscador en el navbar */
-.navbar-search {
+/* Contenedor del buscador en el navbar - Estilo MercadoLibre */
+.navbar-search,
+.nav-search {
     flex: 1;
     max-width: 600px;
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    position: relative;
     transition: transform 0.3s ease;
 }
 
@@ -59,57 +77,133 @@
     text-align: left;
 }
 
-.navbar-search .search-input {
+/* Estilos del input de búsqueda - Estilo MercadoLibre */
+.search-input,
+.nav-search-input {
+    flex: 1;
+    padding: 10px 40px 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    transition: all 0.2s ease;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif;
+    color: #333;
     width: 100%;
 }
 
-.navbar-search > div {
-    display: flex;
-    gap: 0;
-}
-
-/* Estilos del buscador */
-.search-input {
-    flex: 1;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 2px 0 0 2px;
-    outline: none;
-    transition: all 0.3s ease;
-    background-color: white;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
+.nav-search-input:focus,
 .search-input:focus {
     box-shadow: 0 0 0 2px rgba(52, 131, 250, 0.3);
 }
 
-.search-input::placeholder {
+.search-input::placeholder,
+.nav-search-input::placeholder {
     color: #999;
+    font-size: 16px;
 }
 
-.search-button {
-    padding: 10px 20px;
-    background-color: #eeeeee;
-    color: #666;
+/* Label oculto visualmente pero accesible */
+.nav-header-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Botón de limpiar búsqueda */
+.nav-search-clear-btn {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: transparent;
     border: none;
-    border-radius: 0 2px 2px 0;
-    font-size: 18px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    display: none;
+    padding: 0;
+    z-index: 2;
+}
+
+.nav-search--has-text .nav-search-clear-btn {
+    display: block;
+}
+
+.nav-search-clear-btn::before {
+    content: '×';
+    font-size: 24px;
+    color: #999;
+    line-height: 1;
+}
+
+.nav-search-clear-btn:hover::before {
+    color: #333;
+}
+
+/* Botón de cerrar (móvil) */
+.nav-search-close-btn {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Botón de búsqueda - Estilo MercadoLibre */
+.search-button,
+.nav-search-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 46px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    z-index: 1;
 }
 
-.search-button:hover {
-    background-color: #e0e0e0;
+.search-button:hover,
+.nav-search-btn:hover {
+    background-color: rgba(0, 0, 0, 0.04);
 }
 
-.search-button:active {
+.search-button:active,
+.nav-search-btn:active {
     transform: scale(0.95);
+}
+
+/* Icono de búsqueda */
+.nav-icon-search {
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23666' d='M8.5 3a5.5 5.5 0 0 1 4.383 8.823l4.147 4.147a.75.75 0 0 1-.976 1.133l-.084-.073-4.147-4.147A5.5 5.5 0 1 1 8.5 3zm0 1.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.search-button:hover .nav-icon-search,
+.nav-search-btn:hover .nav-icon-search {
+    opacity: 0.7;
 }
 
 #product-search {
@@ -161,13 +255,19 @@
 }
 
 .nav-link {
-    color: #333;
+    color: rgba(0, 0, 0, 0.898);
     text-decoration: none;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     position: relative;
     padding: 5px 0;
-    transition: color 0.3s ease;
+    padding-right: 14px;
+    transition: color 0.3s ease-out;
+    display: flex;
+    line-height: 18px;
+    box-sizing: border-box;
+    font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 .nav-link::after {
@@ -239,4 +339,275 @@
         font-size: 16px;
         padding: 10px 0;
     }
+}
+
+
+/* Estilos para el header completo - Estilo MercadoLibre */
+.nav-header {
+    background-color: #fff159;
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-bounds {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.nav-bounds-with-cart {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo de MercadoLibre */
+.nav-logo {
+    display: block;
+    width: 134px;
+    height: 34px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 134 34'%3E%3Ctext x='0' y='24' font-family='Arial' font-size='20' fill='%23333'%3EMercadoLibre%3C/text%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+/* Menú hamburguesa móvil */
+.nav-header-menu-wrapper {
+    display: none;
+}
+
+.nav-header-menu-switch {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hamburger-top-bread,
+.hamburger-patty,
+.hamburger-bottom-bread {
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-header-menu-switch:hover .hamburger-top-bread,
+.nav-header-menu-switch:hover .hamburger-patty,
+.nav-header-menu-switch:hover .hamburger-bottom-bread {
+    background-color: #3483fa;
+}
+
+/* Menú móvil */
+.nav-header-menu-mobile {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    z-index: 9999;
+}
+
+.nav-header-menu-mobile-open .nav-header-menu-mobile {
+    left: 0;
+}
+
+.nav-header-menu-mobile-content {
+    padding: 20px;
+}
+
+/* Información de usuario invitado */
+.nav-header-menu-mobile-guest {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-header-menu-mobile-guest-logo {
+    margin-bottom: 15px;
+}
+
+.nav-header-menu-mobile-guest-icon {
+    width: 28px;
+    height: 35px;
+}
+
+.nav-header-menu-mobile-guest-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 10px 0;
+}
+
+.nav-header-menu-mobile-guest-text {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.nav-header-menu-mobile-guest-buttons ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-mobile-button {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.nav-mobile-button-filled {
+    background-color: #3483fa;
+    color: white;
+}
+
+.nav-mobile-button-filled:hover {
+    background-color: #2968c8;
+}
+
+.nav-mobile-button-outline {
+    background-color: transparent;
+    color: #3483fa;
+    border: 1px solid #3483fa;
+}
+
+.nav-mobile-button-outline:hover {
+    background-color: rgba(52, 131, 250, 0.1);
+}
+
+/* Lista de menú móvil */
+.nav-header-menu-mobile ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-header-menu-mobile ul li {
+    border-bottom: 1px solid #eee;
+}
+
+.nav-header-menu-mobile ul li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-header-menu-mobile ul li a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Iconos del menú móvil */
+.nav-icon-home,
+.nav-icon-deals-mobile,
+.nav-icon-mplay-mobile,
+.nav-icon-history-mobile,
+.nav-icon-help-mobile,
+.nav-icon-supermercado,
+.nav-icon-moda-mobile,
+.nav-icon-best-sellers-mobile,
+.nav-icon-compra-internacional,
+.nav-icon-stores-mobile,
+.nav-icon-categories-mobile,
+.nav-icon-summary-mobile,
+.nav-icon-vender-mobile,
+.nav-icon-download-mobile {
+    width: 20px;
+    height: 20px;
+    background-color: #999;
+    border-radius: 2px;
+}
+
+/* Tags en el menú */
+.nav-link-tag {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 3px;
+    margin-left: 8px;
+}
+
+.nav-link-tag.mplay {
+    background-color: #00a650;
+    color: white;
+}
+
+.nav-link-tag.supermercado,
+.nav-link-tag.compraInternacional {
+    background-color: #3483fa;
+    color: white;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+    .nav-header-menu-wrapper {
+        display: block;
+    }
+    
+    .navbar-links {
+        display: none;
+    }
+    
+    .nav-search-close-btn {
+        display: block;
+    }
+}
+
+
+/* Estilos adicionales para el input con foco */
+.search-focused,
+.nav-search-input:focus {
+    box-shadow: 0 0 0 2px rgba(52, 131, 250, 0.3) !important;
+}
+
+/* Animación para el botón de limpiar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+.nav-search--has-text .nav-search-clear-btn {
+    animation: fadeIn 0.2s ease;
+}
+
+/* Mejoras visuales para el formulario */
+.nav-search {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.nav-search:focus-within {
+    box-shadow: 0 0 0 2px rgba(52, 131, 250, 0.3);
 }
