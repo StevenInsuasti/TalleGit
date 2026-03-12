@@ -68,7 +68,7 @@
 .developer-card .dev-name,
 .developer-card .developer-name {
     font-size: 26px;
-    color: #333;
+    color: #333 !important;
     margin-bottom: 8px;
     font-weight: 600;
 }
@@ -76,7 +76,7 @@
 .developer-card .dev-title,
 .developer-card .developer-role {
     font-size: 16px;
-    color: #666;
+    color: #666 !important;
     margin-bottom: 6px;
     font-weight: 500;
 }
@@ -102,11 +102,11 @@
 
 .developer-card h4 {
     font-size: 17px;
-    color: #333;
+    color: #333 !important;
     margin-bottom: 12px;
     font-weight: 600;
     padding-bottom: 8px;
-    border-bottom: 2px solid #f5f5f5;
+    border-bottom: 2px solid #f5f5f5 !important;
 }
 
 .developer-card .dev-description p,
