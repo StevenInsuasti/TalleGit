@@ -3,232 +3,461 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Sebastian Orlando Manchabajoy Rosero</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .portfolio-container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            max-width: 800px;
-            width: 100%;
-            padding: 40px;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #667eea;
-        }
-
-        .avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
-            color: white;
-            font-weight: bold;
-        }
-
-        h1 {
-            color: #333;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            color: #667eea;
-            font-size: 1.3em;
-            font-weight: 500;
-        }
-
-        .section {
-            margin: 30px 0;
-        }
-
-        .section h2 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .section h2::before {
-            content: '';
-            width: 5px;
-            height: 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 3px;
-        }
-
-        .description {
-            color: #555;
-            line-height: 1.8;
-            font-size: 1.1em;
-            margin-bottom: 20px;
-        }
-
-        .list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .list li {
-            padding: 12px 20px;
-            margin: 8px 0;
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .list li:hover {
-            background: #e9ecef;
-            transform: translateX(10px);
-        }
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .tech-item {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            font-weight: 600;
-            transition: transform 0.3s ease;
-        }
-
-        .tech-item:hover {
-            transform: scale(1.05);
-        }
-
-        .contact {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 2px solid #e9ecef;
-        }
-
-        .contact a {
-            display: inline-block;
-            padding: 15px 40px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        .contact a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            color: #999;
-            font-size: 0.9em;
-        }
-    </style>
+    <title>Clon MercadoLibre</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/dev-portfolio-3.css">
 </head>
 <body>
-    <div class="portfolio-container">
-        <div class="header">
-            <div class="avatar">SM</div>
-            <h1>Sebastian Orlando Manchabajoy Rosero</h1>
-            <p class="subtitle">Desarrollador Web Frontend</p>
-        </div>
 
-        <div class="section">
-            <h2>Sobre mí</h2>
-            <p class="description">
-                Desarrollador web enfocado en la creación de interfaces de usuario intuitivas y funcionales. 
-                Me especializo en el desarrollo frontend, con experiencia en la construcción de componentes 
-                de navegación y estructuras HTML/CSS bien organizadas.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>Aporte al Proyecto - Clon MercadoLibre</h2>
-            <p class="description" style="font-weight: 600; color: #667eea; margin-bottom: 15px;">
-                Fui responsable del desarrollo del Navbar (barra de navegación) principal del proyecto académico.
-            </p>
-            <ul class="list">
-                <li><strong>Logo del sitio:</strong> Integración de la imagen oficial del logo de MercadoLibre</li>
-                <li><strong>Sección de ubicación:</strong> Implementación de ícono SVG con texto "Enviar a Bogotá"</li>
-                <li><strong>Barra de búsqueda:</strong> Campo de búsqueda con placeholder y botón con ícono de lupa SVG</li>
-                <li><strong>Menú principal:</strong> Enlaces a Categorías, Ofertas, Historial, Supermercado, Moda, Vender y Ayuda</li>
-                <li><strong>Sección de usuario:</strong> Crea tu cuenta, Ingresar, Mis compras y Carrito con ícono SVG</li>
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <nav class="navbar-container">
+            <h1>MercadoLibre Clone</h1>
+            
+            <div class="navbar-search">
+                <h2 class="search-title">Buscar productos</h2>
+                <div>
+                    <input type="text" class="search-input" id="searchInput" placeholder="Buscar productos, marcas y más...">
+                    <button class="search-button" id="searchButton">🔍</button>
+                </div>
+            </div>
+            
+            <ul class="navbar-links" id="navbarLinks">
+                <li><a href="#" class="nav-link">Categorías</a></li>
+                <li><a href="#" class="nav-link">Ofertas</a></li>
+                <li><a href="#" class="nav-link">Historial</a></li>
+                <li><a href="#" class="nav-link">Ayuda</a></li>
             </ul>
-            <p class="description" style="margin-top: 15px;">
-                El Navbar fue construido utilizando HTML y CSS, implementando una estructura clara y organizada 
-                para facilitar la navegación dentro del sitio y mejorar la experiencia del usuario.
-            </p>
+            
+            <button class="navbar-toggle" id="navbarToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Lista de productos -->
+    <section id="product-list" class="product-list-section">
+        <h2>Productos destacados</h2>
+
+        <div class="products" id="products-container">
+
+            <div class="product-card">
+                <img src="https://exitocol.vtexassets.com/arquivos/ids/27277153/iphone-14-pro-max-256gb-oro-reacondicionado.jpg?v=638803265871900000" alt="iPhone 14 Pro Max">
+                <h3>iPhone 14 Pro Max</h3>
+                <p class="price">$4.299.000</p>
+                <p class="discount">12% OFF</p>
+                <p class="shipping">Envío gratis</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_682320-MLA99454593622_112025-O.webp" alt="Samsung Galaxy S23 Ultra">
+                <h3>Samsung Galaxy S23 Ultra</h3>
+                <p class="price">$3.899.000</p>
+                <p class="discount">15% OFF</p>
+                <p class="shipping">Envío gratis</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-macbook-air-m2-midnight-202208?wid=4000&hei=3072&fmt=jpeg&qlt=90&.v=1659114484307" alt="MacBook Air M2">
+                <h3>MacBook Air M2</h3>
+                <p class="price">$5.499.000</p>
+                <p class="discount">10% OFF</p>
+                <p class="shipping">Envío gratis</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEFEg_XFU1dUEWxHYorlN3Gl4-isYbI0bwtg&s" alt="PlayStation 5">
+                <h3>PlayStation 5</h3>
+                <p class="price">$2.599.000</p>
+                <p class="discount">5% OFF</p>
+                <p class="shipping">Envío gratis</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://exitocol.vtexassets.com/arquivos/ids/31380851/TV-QLED-55-140-CM-UHD-4K-SAMSUNG-55-Pulgadas-QLED-Uhd-4K-Smart-TV-QN55Q60DAKXZL-3569034_a.jpg?v=638999344044830000" alt="Smart TV Samsung 55">
+                <h3>Smart TV Samsung 55"</h3>
+                <p class="price">$1.899.000</p>
+                <p class="discount">20% OFF</p>
+                <p class="shipping">Envío gratis</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://mac-center.com/cdn/shop/files/AirPods_Pro_en_su_estuche_con_MagSafe.jpg?v=1742255727&width=1445" alt="AirPods Pro 2">
+                <h3>AirPods Pro 2</h3>
+                <p class="price">$899.000</p>
+                <p class="discount">8% OFF</p>
+                <p class="shipping">Envío gratis</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Portafolio de desarrolladores -->
+    <section id="dev-portfolio">
+        <h2>Nuestro equipo</h2>
+
+        <div class="developers-container">
+
+            <article class="developer-card" id="dev-1">
+                <div class="dev-header">
+                    <div class="dev-avatar">
+                        <img src="assets/img/avatar.png" alt="Steven Eraso Insuasti">
+                    </div>
+                    <div class="dev-basic-info">
+                        <h3 class="dev-name">Steven Eraso Insuasti</h3>
+                        <p class="dev-title">Desarrollador Web Full Stack</p>
+                        <p class="dev-level">Estudiante de quinto semestre</p>
+                    </div>
+                </div>
+                
+                <div class="dev-body">
+                    <div class="dev-description">
+                        <h4>Sobre mí</h4>
+                        <p>Desarrollador web apasionado por la creación de interfaces modernas y funcionales. Me enfoco en construir aplicaciones web eficientes, limpias y fáciles de usar, con especial interés en el desarrollo frontend y la experiencia de usuario.</p>
+                    </div>
+                    
+                    <div class="dev-services">
+                        <h4>Servicios</h4>
+                        <ul>
+                            <li>Desarrollo de páginas web</li>
+                            <li>Diseño de interfaces UI</li>
+                            <li>Maquetación con HTML y CSS</li>
+                            <li>Integración con JavaScript</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="dev-technologies">
+                        <h4>Tecnologías</h4>
+                        <ul class="tech-list">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>Git</li>
+                            <li>GitHub</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="dev-contribution">
+                        <h4>Aporte al proyecto</h4>
+                        <p>Implementé la sección de lista de productos destacados (product-list), desarrollando la estructura HTML con tarjetas de productos que incluyen imágenes, precios, descuentos y opciones de envío. También participé en la integración visual de los componentes del proyecto.</p>
+                    </div>
+                </div>
+                
+                <div class="dev-footer">
+                    <div class="dev-contact">
+                        <p class="contact-phone">📱 Celular: 3001234567</p>
+                    </div>
+                    <a href="https://github.com/StevenInsuasti" class="dev-github" target="_blank" rel="noopener noreferrer">
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Portafolio Desarrollador 2 -->
+            <article class="developer-card" id="dev-2">
+                <div class="developer-header">
+                    <div class="developer-avatar">
+                        <img src="https://via.placeholder.com/150" alt="Sebastian Orlando Manchabajoy">
+                    </div>
+                    <div class="developer-title">
+                        <h3 class="developer-name">Sebastian Orlando Manchabajoy</h3>
+                        <p class="developer-role">Desarrollador Web Full Stack</p>
+                        <p class="developer-level">Estudiante de quinto semestre</p>
+                    </div>
+                </div>
+                
+                <div class="developer-description">
+                    <h4>Sobre mí</h4>
+                    <p>Desarrollador web apasionado por crear experiencias digitales excepcionales. Me especializo en el desarrollo frontend y backend, con un enfoque en la creación de aplicaciones web modernas, responsivas y eficientes.</p>
+                </div>
+                
+                <div class="developer-services">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li>Desarrollo de aplicaciones web responsivas</li>
+                        <li>Diseño e implementación de interfaces de usuario</li>
+                        <li>Desarrollo de APIs RESTful</li>
+                        <li>Optimización de rendimiento web</li>
+                        <li>Integración de bases de datos</li>
+                    </ul>
+                </div>
+                
+                <div class="developer-technologies">
+                    <h4>Tecnologías</h4>
+                    <div class="tech-list">
+                        <span class="tech-badge">HTML5</span>
+                        <span class="tech-badge">CSS3</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">Git</span>
+                    </div>
+                </div>
+                
+                <div class="developer-contributions">
+                    <h4>Aporte al proyecto</h4>
+                    <div class="contribution-item">
+                        <p>Participé en la integración y coordinación del proyecto, asegurando que todos los componentes trabajaran de manera cohesiva. Colaboré en la estructura general del sitio y en la implementación de mejoras visuales.</p>
+                    </div>
+                </div>
+                
+                <div class="developer-contact">
+                    <p>📱 Celular: 3001234568</p>
+                    <a href="https://github.com/desarrollador2" class="github-link" target="_blank" rel="noopener noreferrer">
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Portafolio Desarrollador 3 -->
+            <article class="developer-card" id="dev-3">
+                <div class="dev-header">
+                    <div class="dev-avatar">
+                        <img src="https://via.placeholder.com/150" alt="Hector Alejandro Riascos Insuasty">
+                    </div>
+                    <div class="dev-basic-info">
+                        <h3 class="dev-name">Hector Alejandro Riascos Insuasty</h3>
+                        <p class="dev-title">Ingeniero de Software</p>
+                        <p class="dev-level">Estudiante de quinto semestre</p>
+                    </div>
+                </div>
+                
+                <div class="dev-body">
+                    <div class="dev-description">
+                        <h4>Sobre mí</h4>
+                        <p>Desarrollador enfocado en desarrollo web y construcción de interfaces funcionales. Interesado en arquitectura de software, desarrollo frontend y colaboración en proyectos usando control de versiones con Git.</p>
+                    </div>
+                    
+                    <div class="dev-services">
+                        <h4>Servicios</h4>
+                        <ul>
+                            <li>Desarrollo de interfaces web</li>
+                            <li>Implementación de funcionalidades JavaScript</li>
+                            <li>Integración de componentes frontend</li>
+                            <li>Control de versiones con Git y GitHub</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="dev-technologies">
+                        <h4>Tecnologías</h4>
+                        <ul class="tech-list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Git</li>
+                            <li>GitHub</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="dev-contribution">
+                        <h4>Aporte al proyecto</h4>
+                        <p>Implementé la funcionalidad de búsqueda de productos (product search), desarrollando la estructura del buscador, la lógica de captura del input del usuario y el filtrado de productos. También participé en la integración de esta funcionalidad con la interfaz principal del sitio.</p>
+                    </div>
+                </div>
+                
+                <div class="dev-footer">
+                    <div class="dev-contact">
+                        <p class="contact-phone">📱 Celular: 3226679615</p>
+                    </div>
+                    <a href="https://github.com/HectorRiascos" class="dev-github" target="_blank" rel="noopener noreferrer">
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </article>
+            
         </div>
 
-        <div class="section">
-            <h2>Tecnologías Utilizadas</h2>
-            <div class="tech-grid">
-                <div class="tech-item">HTML5</div>
-                <div class="tech-item">CSS3</div>
-                <div class="tech-item">JavaScript</div>
-                <div class="tech-item">SVG</div>
-                <div class="tech-item">Git</div>
-                <div class="tech-item">GitHub</div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-feature">
+                <div class="feature-icon">💳</div>
+                <h3>Paga con tarjeta o en efectivo</h3>
+                <p>Con Mercado Pago, tienes cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+                <a href="#" class="feature-link">Cómo pagar con Mercado Pago</a>
+            </div>
+            <div class="footer-feature">
+                <div class="feature-icon">🚚</div>
+                <h3>Envío gratis por ser tu primera compra</h3>
+                <p>Aprovecha esta beneficio en millones de productos.</p>
+            </div>
+            <div class="footer-feature">
+                <div class="feature-icon">🛡️</div>
+                <h3>Seguridad, de principio a fin</h3>
+                <p>¿No te gusta? ¡Devuélvelo! En Mercado Libre, no hay nada que no puedas hacer, porque estás siempre protegido.</p>
+                <a href="#" class="feature-link">Cómo te protegemos</a>
             </div>
         </div>
 
-        <div class="section">
-            <h2>Habilidades</h2>
-            <ul class="list">
-                <li>Desarrollo de componentes de navegación responsivos</li>
-                <li>Maquetación HTML semántica y estructurada</li>
-                <li>Diseño CSS con enfoque en usabilidad</li>
-                <li>Integración de iconos SVG</li>
-                <li>Trabajo colaborativo con Git y GitHub</li>
-            </ul>
+        <div class="footer-products">
+            <h4>Productos más buscados</h4>
+            <div class="product-links">
+                <a href="#">Air Fryer</a>
+                <a href="#">Aire Acondicionado</a>
+                <a href="#">Aire Acondicionado Portátil</a>
+                <a href="#">Airpods</a>
+                <a href="#">Alexa</a>
+                <a href="#">Apple TV</a>
+                <a href="#">Apple Watch</a>
+                <a href="#">AuxiForce</a>
+                <a href="#">Audífonos Inalámbricos</a>
+                <a href="#">Bicicletas</a>
+                <a href="#">Caja Fuerte</a>
+                <a href="#">Plancha</a>
+                <a href="#">Heat Press</a>
+                <a href="#">Iphone X</a>
+                <a href="#">Iphone 11</a>
+                <a href="#">Iphone 12</a>
+                <a href="#">Iphone 12 Pro</a>
+                <a href="#">Iphone 12 Pro Max</a>
+                <a href="#">Iphone 13</a>
+                <a href="#">Iphone 13 Pro</a>
+                <a href="#">Iphone 13 Pro Max</a>
+                <a href="#">Iris</a>
+                <a href="#">Lavadora</a>
+                <a href="#">Llantas</a>
+                <a href="#">Motorola</a>
+                <a href="#">Nevera</a>
+                <a href="#">Nintendo</a>
+                <a href="#">Nintendo Switch</a>
+                <a href="#">Oculus Quest 2</a>
+                <a href="#">Playstation 5</a>
+                <a href="#">Radios</a>
+                <a href="#">Roku 12</a>
+                <a href="#">Rodina Roku 12</a>
+                <a href="#">Roku Magicgate</a>
+                <a href="#">Roku</a>
+                <a href="#">S23 Ultra</a>
+                <a href="#">Samsung</a>
+                <a href="#">Samsung A52</a>
+                <a href="#">Samsung A54</a>
+                <a href="#">Samsung S21</a>
+                <a href="#">Samsung S24 Ultra</a>
+                <a href="#">Sim Cutter</a>
+                <a href="#">Smartwatch</a>
+                <a href="#">Tablet</a>
+                <a href="#">Teclado</a>
+                <a href="#">Ventiladores</a>
+                <a href="#">Webcam</a>
+                <a href="#">Xbox</a>
+                <a href="#">Xbox Series S</a>
+                <a href="#">Xbox Series X</a>
+                <a href="#">Xiaomi</a>
+            </div>
         </div>
 
-        <div class="contact">
-            <a href="https://github.com/SebastianManchabajoy" target="_blank">Ver mi GitHub</a>
+        <div class="footer-alphabet">
+            <h4>Buscar productos por letra inicial:</h4>
+            <div class="alphabet-links">
+                <a href="#">A</a>
+                <a href="#">B</a>
+                <a href="#">C</a>
+                <a href="#">D</a>
+                <a href="#">E</a>
+                <a href="#">F</a>
+                <a href="#">G</a>
+                <a href="#">H</a>
+                <a href="#">I</a>
+                <a href="#">J</a>
+                <a href="#">K</a>
+                <a href="#">L</a>
+                <a href="#">M</a>
+                <a href="#">N</a>
+                <a href="#">O</a>
+                <a href="#">P</a>
+                <a href="#">Q</a>
+                <a href="#">R</a>
+                <a href="#">S</a>
+                <a href="#">T</a>
+                <a href="#">U</a>
+                <a href="#">V</a>
+                <a href="#">W</a>
+                <a href="#">X</a>
+                <a href="#">Y</a>
+                <a href="#">Z</a>
+            </div>
         </div>
 
-        <footer>
-            <p>© 2024 Sebastian Orlando Manchabajoy Rosero - Proyecto Académico</p>
-        </footer>
-    </div>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Acerca de</h4>
+                <a href="#">Mercado Libre</a>
+                <a href="#">Investor relations</a>
+                <a href="#">Tendencias</a>
+                <a href="#">Sustentabilidad</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="footer-column">
+                <h4>Otros sitios</h4>
+                <a href="#">Developers</a>
+                <a href="#">Mercado Pago</a>
+                <a href="#">Envíos</a>
+                <a href="#">Mercado Shops</a>
+                <a href="#">Mercado Ads</a>
+            </div>
+            <div class="footer-column">
+                <h4>Ayuda / PQR</h4>
+                <a href="#">Comprar</a>
+                <a href="#">Vender</a>
+                <a href="#">Resolución de problemas</a>
+                <a href="#">Centro de seguridad</a>
+            </div>
+            <div class="footer-column">
+                <h4>Redes sociales</h4>
+                <a href="#">Twitter</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+            </div>
+            <div class="footer-column">
+                <h4>Mi cuenta</h4>
+                <a href="#">Ingresa</a>
+                <a href="#">Vender</a>
+            </div>
+            <div class="footer-column">
+                <h4>Suscripciones</h4>
+                <a href="#">Meli+</a>
+                <a href="#">Disney+</a>
+                <a href="#">Star+</a>
+                <a href="#">Paramount+</a>
+                <a href="#">VIX Premium</a>
+                <a href="#">Amazon</a>
+            </div>
+            <div class="footer-column">
+                <h4>Temporales</h4>
+                <a href="#">Black Friday</a>
+                <a href="#">Hot Sale</a>
+                <a href="#">Descuentos</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <a href="#">Trabaja con nosotros</a>
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Promociones</a>
+                <a href="#">Cómo cuidamos tu privacidad</a>
+                <a href="#">Accesibilidad</a>
+                <a href="#">Ayuda / PQR</a>
+                <a href="#">Horarios</a>
+                <a href="#">www.sic.gov.co</a>
+            </div>
+            <p class="footer-copyright">Copyright © 1999-2025 MercadoLibre Colombia LTDA.</p>
+            <p class="footer-address">Carrera 17 No 93 - 09 Piso 3, Bogotá D.C., Colombia</p>
+        </div>
+
+        <div class="footer-academic">
+            <p>🎓 Proyecto académico - Clon MercadoLibre</p>
+        </div>
+    </footer>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/product-search.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
