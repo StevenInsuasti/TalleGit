@@ -1,0 +1,11 @@
+/* Estilos para el portafolio del desarrollador 4 - Tatiana Torres Gomez */
+#dev-4 {
+    border-top: 4px solid #ffe600 !important;
+}
+
+#dev-4 .dev-contribution {
+    background: #fafafa !important;
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 3px solid #ffe600 !important;
+}
