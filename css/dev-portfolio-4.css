@@ -1,48 +1,223 @@
 /* Estilos para el portafolio del desarrollador 4 - Tatiana Torres Gomez */
-
 #dev-4 {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: linear-gradient(135deg, #ffe6f0 0%, #ffffff 100%);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 24px rgba(255, 105, 180, 0.15);
+    margin-bottom: 24px;
+    transition: all 0.4s ease;
+    border: 2px solid #ff69b4;
+    position: relative;
+    overflow: hidden;
+}
+
+#dev-4::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 105, 180, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+#dev-4:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(255, 105, 180, 0.25);
 }
 
 #dev-4 .dev-header {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    gap: 24px;
+    margin-bottom: 28px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+#dev-4 .dev-avatar {
+    flex-shrink: 0;
+    position: relative;
+}
+
+#dev-4 .dev-avatar::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff69b4, #ff1493);
+    z-index: -1;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+#dev-4 .dev-avatar img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#dev-4 .dev-basic-info {
+    flex: 1;
 }
 
 #dev-4 .dev-name {
-    color: white;
-    font-size: 24px;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #333 0%, #ff69b4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-#dev-4 .dev-title,
+#dev-4 .dev-title {
+    font-size: 17px;
+    color: #ff69b4;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
 #dev-4 .dev-level {
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    color: #666;
+    background: rgba(255, 105, 180, 0.15);
+    padding: 4px 12px;
+    border-radius: 12px;
+    display: inline-block;
 }
 
-#dev-4 h4 {
-    color: white;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+#dev-4 .dev-body {
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+#dev-4 .dev-body > div {
+    margin-bottom: 24px;
+}
+
+#dev-4 .dev-body h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 12px;
+    font-weight: 700;
+    border-bottom: 3px solid #ff69b4;
     padding-bottom: 8px;
-    margin-bottom: 15px;
+    display: inline-block;
+}
+
+#dev-4 .dev-description p,
+#dev-4 .dev-contribution p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 16px;
+    border-radius: 12px;
+    border-left: 4px solid #ff69b4;
+}
+
+#dev-4 .dev-services ul,
+#dev-4 .dev-technologies ul {
+    list-style: none;
+    padding: 0;
+}
+
+#dev-4 .dev-services li {
+    font-size: 15px;
+    color: #555;
+    padding: 10px 0;
+    padding-left: 28px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+#dev-4 .dev-services li:hover {
+    padding-left: 32px;
+    color: #333;
+}
+
+#dev-4 .dev-services li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #00a650;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#dev-4 .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 #dev-4 .tech-list li {
-    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 2px 8px rgba(255, 105, 180, 0.3);
+    transition: all 0.3s ease;
 }
 
-#dev-4 .dev-github {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-}
-
-#dev-4 .dev-github:hover {
-    background: rgba(255, 255, 255, 0.3);
+#dev-4 .tech-list li:hover {
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 105, 180, 0.5);
+}
+
+#dev-4 .dev-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 2px solid rgba(255, 105, 180, 0.3);
+    position: relative;
+    z-index: 1;
 }
 
 #dev-4 .contact-phone {
-    color: rgba(255, 255, 255, 0.95);
+    font-size: 15px;
+    color: #555;
+    font-weight: 500;
+}
+
+#dev-4 .dev-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #333 0%, #000 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#dev-4 .dev-github:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    #dev-4 .dev-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #dev-4 .dev-footer {
+        flex-direction: column;
+        gap: 16px;
+    }
 }
