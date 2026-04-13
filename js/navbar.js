@@ -11,6 +11,55 @@
     const searchInput = document.querySelector('.nav-search-input');
     const clearBtn = document.querySelector('.nav-search-clear-btn');
     const closeBtn = document.querySelector('.nav-search-close-btn');
+    const navbarToggle = document.getElementById('navbarToggle');
+    const navbarLinks = document.getElementById('navbarLinks');
+
+    // ========================================
+    // MENÚ HAMBURGUESA
+    // ========================================
+    if (navbarToggle && navbarLinks) {
+        navbarToggle.addEventListener('click', function() {
+            navbarLinks.classList.toggle('active');
+            
+            // Animar las líneas del hamburguesa
+            const spans = navbarToggle.querySelectorAll('span');
+            navbarToggle.classList.toggle('open');
+            
+            if (navbarToggle.classList.contains('open')) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
+            } else {
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '';
+                spans[2].style.transform = '';
+            }
+        });
+
+        // Cerrar menú al hacer click fuera
+        document.addEventListener('click', function(e) {
+            if (!navbarToggle.contains(e.target) && !navbarLinks.contains(e.target)) {
+                navbarLinks.classList.remove('active');
+                navbarToggle.classList.remove('open');
+                const spans = navbarToggle.querySelectorAll('span');
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '';
+                spans[2].style.transform = '';
+            }
+        });
+
+        // Cerrar menú al hacer click en un link
+        navbarLinks.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                navbarLinks.classList.remove('active');
+                navbarToggle.classList.remove('open');
+                const spans = navbarToggle.querySelectorAll('span');
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '';
+                spans[2].style.transform = '';
+            });
+        });
+    }
 
     // ========================================
     // NAVBAR FIJO AL HACER SCROLL
